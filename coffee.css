@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 7em;
+}
+
+.nav-bar{
+    width: 100%;
+    height: auto;
+    padding: 1.3em 4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(222, 184, 135, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 1em;
+}
+
+.logo i{
+    font-size: 5.5em;
+    color: #df922f;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+}
+
+.links a{
+    margin-left: 2em;
+    font-size: 1.6em;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.links a:hover{
+    color: brown;
+}
+
+.links a:active{
+    color: rgb(165, 42, 42, .7);
+}
+
+
+
+
+
+
+
+.menu{
+    width: 400px;
+    height: auto;
+    margin-top: 15em;
+    background-color: burlywood;
+    padding: 1.9em 2em;
+}
+
+.menu > header{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.menu > header h1{
+    font-size: 3.5em;
+    font-weight: 900;
+}
+
+.menu > header p{
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.bottom-line{
+    color: brown;
+    border-radius: 1px;
+    height: 2px;
+    background-color: brown;
+}
+
+#coffee, #dessert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#coffee h2, #dessert h2{
+    margin-top: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+img{
+    text-align: center;
+    width: fit-content;
+    display: flex;
+}
+
+.item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    margin-top: .8em;
+}
+
+.item > p{
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.down-line{
+    margin-top: 3em;
+    color: brown;
+    border-radius: 1px;
+    height: 2px;
+    background-color: brown;
+}
+
+footer{
+    margin-top: .8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p a{
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.address{
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.ham{
+    display: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px){
+
+    .nav-bar{
+        display: flex;
+        width: 100%;
+    }
+
+    .logo i{
+        font-size: 4em;
+    }
+
+    .ham{
+        display: block;
+    }
+
+    .ham i{
+        font-size: 2em;
+    }
+
+    .links{
+        position: absolute;
+        top: 6.6em;
+        right: 0;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 89vw;
+        background-color: rgb(222, 184, 135, .5);
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+    }
+
+    .links.openmenu{
+        height: 100vh;
+    }
+
+    .links a{
+        margin-bottom: 2em;
+        color: black;
+    }
+
+    .links a:first-child{
+        margin-top: 2em;
+    }
+
+    
+
+    .menu{
+        width: 280px;
+    }
+
+    .menu > header h1{
+        font-size: 2.5em;
+        font-weight: 900;
+    }
+
+    .menu > header p{
+        margin-bottom: .8em;
+    }
+
+    .item > p{
+        font-size: 1.6em;
+    }
+}
